@@ -155,13 +155,12 @@ class PreviewPanel(QWidget):
         pix = QPixmap()
         pix.loadFromData(image_data)
         if not pix.isNull():
-            self._screen.setPixmap(
-                pix.scaled(
-                    self._screen.size(),
-                    Qt.AspectRatioMode.KeepAspectRatio,
-                    Qt.TransformationMode.SmoothTransformation,
-                )
+            scaled = pix.scaled(
+                self._screen.size(),
+                Qt.AspectRatioMode.KeepAspectRatio,
+                Qt.TransformationMode.SmoothTransformation,
             )
+            self._screen.setPixmap(scaled)
             self._status.setText("  Live screenshot")
 
     def set_status(self, text: str) -> None:

@@ -155,7 +155,7 @@ class BlockConfigPanel(QWidget):
             self._add_text_field("App Package", "package", p.get("package", ""))
 
         elif s == "color_detected":
-            self._add_hsv("Colour (H / S / V)", p.get("color_hsv", [120, 100, 100]))
+            self._add_hsv("Color (H / S / V)", p.get("color_hsv", [120, 100, 100]))
             self._add_int_spin("Tolerance", "tolerance", int(p.get("tolerance", 30)), 0, 180)
 
         elif s == "screen_unchanged":

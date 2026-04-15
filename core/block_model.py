@@ -4,7 +4,7 @@ Each :class:`BlockData` represents a single block on the canvas — a
 condition, action, or control element.
 
 ``BLOCK_DEFINITIONS`` is the single source of truth for every available
-block type: its label, colour, icon, default parameters, and tooltip text.
+block type: its label, color, icon, default parameters, and tooltip text.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ from typing import Any, Dict
 # Value → metadata dict:
 #     label           Human-readable name shown on the block tile.
 #     category        "condition" | "action" | "control"
-#     color           Hex colour for the block background.
+#     color           Hex color for the block background.
 #     icon            Emoji icon (single character / emoji).
 #     default_params  Dict copied for each new block instance.
 #     description     Tooltip text for beginners.
@@ -62,7 +62,7 @@ BLOCK_DEFINITIONS: Dict[str, Dict[str, Any]] = {
             "tolerance": 30,
             "region": None,
         },
-        "description": "Fires when a specific HSV colour is present on screen.",
+        "description": "Fires when a specific HSV color is present on screen.",
     },
     "screen_unchanged": {
         "label": "IF Screen Unchanged",
