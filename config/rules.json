@@ -1,0 +1,66 @@
+[
+  {
+    "name": "detect_play_button",
+    "enabled": true,
+    "priority": 1,
+    "cooldown": 2.0,
+    "condition": {
+      "type": "image",
+      "target": "play_button.png",
+      "threshold": 0.85,
+      "region": null
+    },
+    "action": {
+      "type": "tap",
+      "position": "center_of_match"
+    }
+  },
+  {
+    "name": "detect_error_dialog",
+    "enabled": true,
+    "priority": 0,
+    "cooldown": 5.0,
+    "condition": {
+      "type": "image",
+      "target": "error_dialog.png",
+      "threshold": 0.80,
+      "region": null
+    },
+    "action": {
+      "type": "tap",
+      "position": [540, 960]
+    }
+  },
+  {
+    "name": "stuck_recovery",
+    "enabled": true,
+    "priority": 0,
+    "cooldown": 30.0,
+    "condition": {
+      "type": "no_change",
+      "window": 15.0
+    },
+    "action": {
+      "type": "restart_app",
+      "package": "com.example.testapp"
+    }
+  },
+  {
+    "name": "swipe_up_on_idle",
+    "enabled": false,
+    "priority": 3,
+    "cooldown": 10.0,
+    "condition": {
+      "type": "color",
+      "color_hsv": [120, 100, 100],
+      "tolerance": 30,
+      "region": [0, 1700, 1080, 200]
+    },
+    "action": {
+      "type": "swipe",
+      "from": [540, 1800],
+      "to": [540, 400],
+      "duration": 300
+    }
+  }
+]
